@@ -1,0 +1,162 @@
+[
+  {
+    "id": "lead-1792016554200",
+    "createdAt": "2026-10-14T22:22:34.200Z",
+    "studentName": "Siddharth Rao",
+    "parentPhone": "9876543210",
+    "parentEmail": "siddharth.parent@gmail.com",
+    "campusId": "chaitanya-hyd",
+    "campusName": "Chaitanya Deemed University (Hyderabad)",
+    "campusTotalFee": 1000000,
+    "pcmPercentage": 75,
+    "budgetTier": "₹2.5L - ₹4L",
+    "preferredLanguage": "తెలుగు (Telugu)",
+    "report": {
+      "breakEvenMonths": 12,
+      "startingSalaryRange": "₹7.5 LPA - ₹12.5 LPA",
+      "traditionalCollegeROIComparison": {
+        "niatProjects": "50+ Enterprise Full-Stack & Generative AI applications deployed live to AWS/Vercel with public GitHub repos, system architecture design, and code reviews.",
+        "traditionalProjects": "1-2 standard textbook academic assignments (e.g. basic calculator, library management) with outdated tech stacks and zero cloud deployment.",
+        "niatPlacement": "High-growth tech product firms, fintechs, and modern AI engineering roles with ₹7.5 LPA - ₹12.5 LPA starting CTC and direct placement acceleration.",
+        "traditionalPlacement": "Mass-recruitment IT service vendor companies offering ₹3.2 - ₹3.6 LPA with high competition and 6-12 month bench waiting periods.",
+        "degreeRecognition": "Official UGC-Recognized 4-Year B.Tech Degree from Chaitanya Deemed to be University (NAAC Accredited) + Industry-Standard NIAT Specialization Certificate."
+      },
+      "parentReassuranceLetter": {
+        "language": "Telugu",
+        "title": "తల్లిదండ్రులకు గౌరవపూర్వక హామీ పత్రం: Chaitanya Deemed University (Hyderabad)",
+        "body": "గౌరవనీయులైన Siddharth Rao తల్లిదండ్రులకు నమస్కారములు.\n\nమీ బిడ్డ ఇంజనీరింగ్ భవిష్యత్తు కోసం సరైన నిర్ణయం తీసుకోవడం ఒక కుటుంబానికి ఎంతటి ప్రాధాన్యమైన విషయమో మేము గ్రహించాము. ముఖ్యంగా కాలేజ్ భద్రత, హాస్టల్ వాతావరణం, మరియు డిగ్రీ చెల్లుబాటుపై మీకున్న ప్రతి సందేహానికి స్పష్టమైన హామీ ఇవ్వడమే మా బాధ్యత.\n\nChaitanya Deemed University (Hyderabad) అనేది UGC మరియు AICTE నిబంధనల ప్రకారం పూర్తి గుర్తింపు పొందిన ఉన్నత విద్యాసంస్థ. ఇక్కడ ప్రవేశించిన విద్యార్థికి లభించే డిగ్రీ ప్రభుత్వ ఉద్యోగాలు (UPSC, GATE) మరియు విదేశీ ఉన్నత విద్య (MS) కొరకు 100% చెల్లుబాటు అవుతుంది. హాస్టల్ వద్ద 24 గంటల సీసీటీవీ పర్యవేక్షణ, బయోమెట్రిక్ ప్రవేశం, మరియు నిరంతరం అందుబాటులో ఉండే అనుభవజ్ఞులైన వార్డెన్లు ఉన్నారు.\n\nసాధారణ ఇంజనీరింగ్ కాలేజీలలో పాత సిలబస్ నేర్చుకుని ₹3.5 లక్షల చిన్న ఉద్యోగాల కోసం ఎదురుచూడాల్సిన పరిస్థితి ఉండదు. NxtWave NIAT శిక్షణ ద్వారా మీ బిడ్డ 50కి పైగా లైవ్ సాఫ్ట్‌వేర్ మరియు AI ప్రాజెక్టులను నిర్మిస్తూ, ₹7.5 LPA - ₹12.5 LPA ఆరంభ ప్యాకేజీతో కేవలం 12 నెలల్లోనే పూర్తి ఫీజును రికవర్ చేసుకునే సామర్థ్యాన్ని పొందుతారు.",
+        "keyAssurances": [
+          "UGC మరియు AICTE గుర్తింపు పొందిన 4 సంవత్సరాల ఇంజనీరింగ్ డిగ్రీ (ప్రభుత్వ ఉద్యోగాలు మరియు విదేశీ విద్యకు పూర్తి అర్హత)",
+          "హాస్టల్ బయోమెట్రిక్ గేట్-పాస్ సిస్టమ్ & విద్యార్థి హాజరుపై తల్లిదండ్రులకు రోజువారీ SMS సమాచారం",
+          "₹7.5 LPA - ₹12.5 LPA ప్రారంభ టెక్ వేతనంతో కేవలం 12 నెలల్లోనే మొత్తం కాలేజ్ ఫీజు రికవరీ (ROI)",
+          "రాత పరీక్షలకే పరిమితం కాకుండా 50కి పైగా ప్రొడక్షన్-గ్రేడ్ సాఫ్ట్‌వేర్ ప్రాజెక్టుల నిర్మాణం"
+        ]
+      },
+      "counselorBrief": {
+        "readinessScore": 80,
+        "primaryObjectionToHandle": "Hostel security and student discipline away from home. Emphasize biometric entry gates, resident wardens, and daily digital attendance tracking.",
+        "recommendedScholarshipAngle": "NAT Top-Percentile Merit Grant (₹50,000 to ₹75,000 tuition assistance) applicable on confirming campus allocation before seat closure."
+      }
+    }
+  },
+  {
+    "id": "lead-1728994800001",
+    "createdAt": "2026-10-14T10:15:00.000Z",
+    "studentName": "Kalyan Ramachandran",
+    "parentPhone": "+91 98480 12345",
+    "parentEmail": "ramachandran.k@gmail.com",
+    "campusId": "chaitanya-hyd",
+    "campusName": "Chaitanya Deemed University (Hyderabad)",
+    "campusTotalFee": 1000000,
+    "pcmPercentage": 86,
+    "budgetTier": "₹2.5L - ₹4L",
+    "preferredLanguage": "తెలుగు (Telugu)",
+    "report": {
+      "breakEvenMonths": 13,
+      "startingSalaryRange": "₹8.5 LPA - ₹14.0 LPA",
+      "traditionalCollegeROIComparison": {
+        "niatProjects": "50+ Enterprise Full-Stack & Generative AI applications deployed live to AWS/Vercel with GitHub version history and code reviews.",
+        "traditionalProjects": "1-2 theoretical final-year library or calculator projects copied from older batches with zero production deployments.",
+        "niatPlacement": "Direct tech product firms & high-growth IT engineering roles paying ₹8L - ₹15L+ starting packages.",
+        "traditionalPlacement": "Mass recruitment IT services firms offering ₹3.2L - ₹3.6L with extended bench delays.",
+        "degreeRecognition": "Full 4-Year B.Tech / BCA Degree awarded by UGC Deemed-to-be-University (NAAC A accredited) with AICTE compliant credits + NIAT Industry Tech Certificate."
+      },
+      "parentReassuranceLetter": {
+        "language": "Telugu",
+        "title": "తల్లిదండ్రులకు గౌరవపూర్వక అభయం: చైతన్య విశ్వవిద్యాలయం క్యాంపస్ & మీ అబ్బాయి భవిష్యత్తు",
+        "body": "ప్రియమైన రామచంద్రన్ గారికి, నమస్కారములు. మీ అబ్బాయి కళ్యాణ్ NAT పరీక్షలో అర్హత సాధించినందుకు మా హృదయపూర్వక అభినందనలు. విద్యార్థి భద్రత, హాస్టల్ క్రమశిక్షణ, మరియు డిగ్రీ చెల్లుబాటుపై మీకు ఉండే ప్రతి సందేహాన్ని నివృత్తి చేయడం మా బాధ్యత. చైతన్య డీమ్డ్ యూనివర్సిటీ హైదరాబాద్ క్యాంపస్ UGC కేటగిరీ-1 గుర్తింపు పొందిన ఉన్నత విద్యాసంస్థ. ఇక్కడ 24 గంటల సీసీటీవీ నిఘా, బయోమెట్రిక్ ప్రవేశం, వార్డెన్ల ప్రత్యక్ష పర్యవేక్షణ మరియు పౌష్టికాహార భోజన వసతి ఉన్నాయి. NxtWave NIAT ద్వారా కేవలం సిద్ధాంతాలు కాకుండా 50కి పైగా లైవ్ ప్రాజెక్ట్‌లతో మొదటి సంవత్సరం నుంచే పరిశ్రమ స్థాయి శిక్షణ అందుతుంది.",
+        "keyAssurances": [
+          "UGC మరియు AICTE గుర్తింపు పొందిన 4 సంవత్సరాల ఇంజనీరింగ్ డిగ్రీ",
+          "బయోమెట్రిక్ హాస్టల్ గేట్-పాస్ సిస్టమ్ & తల్లిదండ్రులకు రోజువారీ SMS హాజరు",
+          "మొదటి 13 నెలల్లోనే మొత్తం కాలేజ్ ఫీజును రికవర్ చేసుకునే కెరీర్ ప్యాకేజీ",
+          "నిపుణులైన రెసిడెంట్ వార్డెన్లు & క్యాంపస్ ఆసుపత్రి సౌకర్యం"
+        ]
+      },
+      "counselorBrief": {
+        "readinessScore": 88,
+        "primaryObjectionToHandle": "Hostel safety protocol and comparison with local EAMCET convener colleges in Telangana.",
+        "recommendedScholarshipAngle": "86% PCM score qualifies for Tier-1 Merit Grant reducing first-year hostel fees."
+      }
+    }
+  },
+  {
+    "id": "lead-1728994800002",
+    "createdAt": "2026-10-14T11:40:00.000Z",
+    "studentName": "Aarav Sharma",
+    "parentPhone": "+91 98230 45678",
+    "parentEmail": "sunil.sharma78@yahoo.com",
+    "campusId": "adypu-pune",
+    "campusName": "Ajeenkya DY Patil University (Pune)",
+    "campusTotalFee": 1400000,
+    "pcmPercentage": 92,
+    "budgetTier": "Above ₹4L",
+    "preferredLanguage": "हिन्दी (Hindi)",
+    "report": {
+      "breakEvenMonths": 14,
+      "startingSalaryRange": "₹10.0 LPA - ₹18.0 LPA",
+      "traditionalCollegeROIComparison": {
+        "niatProjects": "60+ Real-world Microservices, LLM pipelines, and Cloud Native deployments with industry mentors from top tech companies.",
+        "traditionalProjects": "Standard textbook lab assignments with negligible GitHub portfolio or system architecture depth.",
+        "niatPlacement": "Product engineering, AI engineering, and fintech roles with 3x higher starting compensation.",
+        "traditionalPlacement": "Generic service company bulk hiring at ₹3.5 LPA CTC.",
+        "degreeRecognition": "Full 4-Year B.Tech Degree from Ajeenkya DY Patil University recognized by UGC and Govt of Maharashtra."
+      },
+      "parentReassuranceLetter": {
+        "language": "Hindi",
+        "title": "अभिभावकों के लिए आश्वासन पत्र: अजिंक्य डीवाई पाटिल यूनिवर्सिटी पुणे एवं सुरक्षित भविष्य",
+        "body": "आदरणीय सुनील शर्मा जी, सादर प्रणाम। आरव का 12वीं में 92% स्कोर और NAT में चयन उसकी उत्कृष्ट प्रतिभा का प्रमाण है। पुणे में लोहेगांव स्थित आधुनिक ADYPU कैंपस विश्वस्तरीय सुरक्षा ग्रिड, 24/7 बायोमेट्रिक निगरानी और सख्त एंटी-रैगिंग नियमों से सुसज्जित है। NIAT का उद्देश्य पारंपरिक रटने वाली पढ़ाई को हटाकर इंडस्ट्री-रेडी हैंड्स-ऑन अनुभव देना है। यहां दी जाने वाली डिग्री यूजीसी से पूरी तरह मान्यता प्राप्त है।",
+        "keyAssurances": [
+          "यूजीसी एवं महाराष्ट्र शासन द्वारा पूर्ण मान्यता प्राप्त डिग्री",
+          "पुणे हिंजेवाड़ी एवं खराड़ी आईटी हब से सीधा कॉर्पोरेट मेंटरशिप संपर्क",
+          "स्मार्ट कार्ड आधारित हॉस्टल सुरक्षा एवं 24 घंटे मेडिकल सहायता",
+          "प्रथम वर्ष से ही 10-18 लाख के पैकेज हेतु हैंड्स-ऑन प्रोजेक्ट्स"
+        ]
+      },
+      "counselorBrief": {
+        "readinessScore": 94,
+        "primaryObjectionToHandle": "Tuition cost justification (₹14L) vs standard Pune engineering colleges.",
+        "recommendedScholarshipAngle": "92% PCM grants eligibility for Dean's Academic Merit Scholarship of ₹1.5L."
+      }
+    }
+  },
+  {
+    "id": "lead-1728994800003",
+    "createdAt": "2026-10-14T14:20:00.000Z",
+    "studentName": "Sneha Venkatesh",
+    "parentPhone": "+91 97312 98765",
+    "parentEmail": "venkatesh.b@outlook.com",
+    "campusId": "svyasa-blr",
+    "campusName": "S-VYASA University (Bengaluru)",
+    "campusTotalFee": 1200000,
+    "pcmPercentage": 74,
+    "budgetTier": "₹2.5L - ₹4L",
+    "preferredLanguage": "English",
+    "report": {
+      "breakEvenMonths": 15,
+      "startingSalaryRange": "₹8.0 LPA - ₹13.5 LPA",
+      "traditionalCollegeROIComparison": {
+        "niatProjects": "50+ Enterprise Full-Stack projects with automated CI/CD and production infrastructure.",
+        "traditionalProjects": "Outdated syllabus without exposure to modern tech stacks or software design patterns.",
+        "niatPlacement": "Product companies in Bengaluru Silicon Valley with ₹8L - ₹13.5L average starting packages.",
+        "traditionalPlacement": "Tier-3 colleges rely on standard ₹3.5L mass recruiters with multi-month onboarding delays.",
+        "degreeRecognition": "NAAC 'A+' accredited Deemed to be University degree under Section 3 of UGC Act 1956."
+      },
+      "parentReassuranceLetter": {
+        "language": "English",
+        "title": "Parent Reassurance & Campus Safety Brief: S-VYASA Bengaluru",
+        "body": "Dear Mr. & Mrs. Venkatesh, congratulations on Sneha's qualification. As parents, your utmost priority is your daughter's safety, cultural environment, and career security. S-VYASA's Prashanti Nilayam campus in Bengaluru provides a tranquil, gated atmosphere with 24x7 women security officers, biometric curfews, and holistic student support. Paired with NIAT's rigorous tech apprenticeships, Sneha will graduate not with a generic certificate, but with 50+ enterprise projects.",
+        "keyAssurances": [
+          "UGC Section 3 Deemed-to-be University Degree with NAAC 'A+' rating",
+          "Dedicated women hostel floor proctors & 24x7 doctor on premise",
+          "Bengaluru Silicon Valley tech park proximity for internships",
+          "15-month break-even horizon with guaranteed career support ecosystem"
+        ]
+      },
+      "counselorBrief": {
+        "readinessScore": 82,
+        "primaryObjectionToHandle": "Distance from home and Bengaluru living expenses.",
+        "recommendedScholarshipAngle": "Flexible 0% interest monthly installment plan to manage annual fee schedule."
+      }
+    }
+  }
+]
