@@ -112,7 +112,7 @@ export default function HomePage() {
       const data = await res.json();
       if (data.success) {
         setEmailStatus(data.simulated ? "simulated" : "sent");
-        setEmailMessage(data.message || `Official dossier dispatched to ${targetEmail}`);
+        setEmailMessage(data.message || `Official report dispatched to ${targetEmail}`);
       } else {
         setEmailStatus("error");
         setEmailMessage(data.error || "Failed to dispatch email.");
@@ -163,7 +163,7 @@ export default function HomePage() {
         setReportLeadId(data.leadId);
         setCustomRecipientEmail(parentEmail);
 
-        // Auto-dispatch official evaluation dossier to parent's inbox!
+        // Auto-dispatch official evaluation report to parent's inbox!
         if (parentEmail && parentEmail.includes("@")) {
           handleSendEmail(parentEmail, data.report, data.campus);
         }
@@ -292,7 +292,7 @@ export default function HomePage() {
                     <span>Student & Parent Diagnostic Profile</span>
                   </h2>
                   <p className="text-xs text-slate-400 mt-1">
-                    Fill the details to generate an objective institutional ROI dossier
+                    Fill the details to generate an objective institutional ROI report
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-800 text-[11px] font-medium text-slate-300 border border-slate-700">
@@ -673,7 +673,7 @@ export default function HomePage() {
                 <div>
                   <div className="flex items-center space-x-2 text-xs font-semibold text-[#3a86ff] uppercase tracking-wider mb-1">
                     <BadgeCheck className="w-4 h-4" />
-                    <span>Official NIAT Career & ROI Dossier</span>
+                    <span>Official NIAT Career & ROI Report</span>
                     <span className="text-slate-500">•</span>
                     <span className="text-slate-400">ID: {reportLeadId || "Verified"}</span>
                   </div>
@@ -709,12 +709,12 @@ export default function HomePage() {
                     className="px-4 py-2 rounded-xl bg-[#3a86ff] hover:bg-blue-600 disabled:opacity-50 text-xs font-bold text-white shadow-lg shadow-blue-500/20 flex items-center space-x-1.5 transition"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>{emailSending ? "Sending Dossier..." : "Send to Email"}</span>
+                    <span>{emailSending ? "Sending Report..." : "Send to Email"}</span>
                   </button>
                 </div>
               </div>
 
-              {/* Dedicated Official Email Dossier Dispatcher Box */}
+              {/* Dedicated Official Email Report Dispatcher Box */}
               <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#070d1e] to-[#111d4a] border border-blue-500/30 space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center space-x-3">
@@ -723,7 +723,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <h4 className="text-xs sm:text-sm font-bold text-white flex items-center space-x-1.5">
-                        <span>Official Evaluation Dossier Email Dispatch</span>
+                        <span>Official Evaluation Report Email Dispatch</span>
                         <span className="text-[10px] bg-blue-500/20 text-[#3a86ff] px-2 py-0.5 rounded-full font-bold">PDF-Ready</span>
                       </h4>
                       <p className="text-[11px] sm:text-xs text-slate-300">
@@ -772,9 +772,9 @@ export default function HomePage() {
                       )}
                       <span className="leading-relaxed">
                         {emailStatus === "sent" &&
-                          (emailMessage || `Official evaluation dossier successfully delivered to ${customRecipientEmail || parentEmail} via Resend.`)}
+                          (emailMessage || `Official evaluation report successfully delivered to ${customRecipientEmail || parentEmail} via Resend.`)}
                         {emailStatus === "simulated" &&
-                          (emailMessage || `Dossier prepared and queued for ${customRecipientEmail || parentEmail}. (Simulation Mode: Add RESEND_API_KEY in .env.local for live inbox delivery).`)}
+                          (emailMessage || `Report prepared and queued for ${customRecipientEmail || parentEmail}. (Simulation Mode: Add RESEND_API_KEY in .env.local for live inbox delivery).`)}
                         {emailStatus === "error" &&
                           (emailMessage || "Failed to dispatch email. Please check the recipient address.")}
                       </span>

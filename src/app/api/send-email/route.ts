@@ -67,7 +67,7 @@ export async function POST(req: Request) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NIAT Career ROI & Campus Integrity Dossier</title>
+        <title>NIAT Career ROI & Campus Integrity Report</title>
       </head>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0b132b; margin: 0; padding: 24px 12px; color: #0b132b;">
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
@@ -82,7 +82,7 @@ export async function POST(req: Request) {
                 NxtWave NIAT Clarify
               </h1>
               <p style="color: #94a3b8; margin: 6px 0 0 0; font-size: 13px;">
-                Parent Decision, Campus Integrity & Career ROI Dossier
+                Parent Decision, Campus Integrity & Career ROI Report
               </p>
             </td>
           </tr>
@@ -196,7 +196,7 @@ export async function POST(req: Request) {
           body: JSON.stringify({
             from: fromEmail,
             to: [to],
-            subject: `Official NIAT Career ROI & Campus Integrity Dossier - ${studentName}`,
+            subject: `Official NIAT Career ROI & Campus Integrity Report - ${studentName}`,
             html: htmlContent,
           }),
         });

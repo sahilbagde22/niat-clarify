@@ -549,7 +549,7 @@ export default function CounselorPortalPage() {
                     className="px-3.5 py-2 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs font-semibold flex items-center space-x-1.5 transition disabled:opacity-50"
                   >
                     <Mail className="w-3.5 h-3.5 text-[#3a86ff]" />
-                    <span>{emailSending ? "Sending..." : emailSentMsg ? emailSentMsg : "Email Dossier"}</span>
+                    <span>{emailSending ? "Sending..." : emailSentMsg ? emailSentMsg : "Email Report"}</span>
                   </button>
                 </div>
 
