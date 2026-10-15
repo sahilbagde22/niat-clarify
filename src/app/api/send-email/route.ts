@@ -13,6 +13,7 @@ export async function POST(req: Request) {
       parentLanguage = "English",
       totalFee = 0,
       pcmPercentage = 0,
+      natScore = 0,
       reassuranceLetter,
       roiComparison,
     } = body;
@@ -94,7 +95,8 @@ export async function POST(req: Request) {
                   <td style="padding: 6px 12px; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: 600;">Student Candidate</td>
                   <td style="padding: 6px 12px; font-size: 14px; color: #0b132b; font-weight: 700; text-align: right;">${studentName}</td>
                 </tr>
-                ${pcmPercentage ? `<tr><td style="padding: 6px 12px; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: 600;">12th PCM Score</td><td style="padding: 6px 12px; font-size: 14px; color: #3a86ff; font-weight: 700; text-align: right;">${pcmPercentage}%</td></tr>` : ""}
+                ${pcmPercentage ? `<tr><td style="padding: 6px 12px; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: 600;">12th PCM Score</td><td style="padding: 6px 12px; font-size: 14px; color: #0b132b; font-weight: 700; text-align: right;">${pcmPercentage}%</td></tr>` : ""}
+                ${natScore ? `<tr><td style="padding: 6px 12px; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: 600;">NAT Assessment Score</td><td style="padding: 6px 12px; font-size: 14px; color: #3a86ff; font-weight: 700; text-align: right;">${natScore}/100</td></tr>` : ""}
                 <tr>
                   <td style="padding: 6px 12px; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: 600;">Selected Host Campus</td>
                   <td style="padding: 6px 12px; font-size: 14px; color: #0b132b; font-weight: 700; text-align: right;">${campusName} ${campusCity ? `(${campusCity})` : ""}</td>

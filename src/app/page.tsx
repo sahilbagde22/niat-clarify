@@ -39,6 +39,7 @@ export default function HomePage() {
   const [parentEmail, setParentEmail] = useState("");
   const [selectedCampusId, setSelectedCampusId] = useState("chaitanya-hyd");
   const [pcmPercentage, setPcmPercentage] = useState(75);
+  const [natScore, setNatScore] = useState(78);
   const [budgetTier, setBudgetTier] = useState("₹2.5L - ₹4L");
   const [preferredLanguage, setPreferredLanguage] = useState("తెలుగు (Telugu)");
 
@@ -102,6 +103,7 @@ export default function HomePage() {
           parentLanguage: preferredLanguage,
           totalFee: activeCampus.totalFee,
           pcmPercentage: Number(pcmPercentage),
+          natScore: Number(natScore),
           reassuranceLetter: activeReport?.parentReassuranceLetter,
           roiComparison: activeReport?.traditionalCollegeROIComparison,
         }),
@@ -146,6 +148,7 @@ export default function HomePage() {
           parentEmail,
           campusId: selectedCampusId,
           pcmPercentage,
+          natScore,
           budgetTier,
           preferredLanguage,
         }),
@@ -418,34 +421,94 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* 4. 12th PCM Percentage (Slider 50% to 100%) */}
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider text-slate-300 flex items-center space-x-1.5">
+              {/* 4. ACADEMIC & APTITUDE EVALUATION: 4A & 4B */}
+              <div className="space-y-4 p-4 sm:p-5 rounded-2xl bg-slate-900/40 border border-slate-800">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#3a86ff]">
                     <Sliders className="w-3.5 h-3.5 text-[#3a86ff]" />
-                    <span>4. 12th PCM Percentage</span>
-                  </label>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-sm font-bold text-white px-2.5 py-0.5 rounded-lg bg-blue-600/30 border border-blue-500/40">
-                      {pcmPercentage}%
-                    </span>
-                    <span className="text-[11px] font-medium text-emerald-400 hidden sm:inline">
-                      {pcmPercentage >= 85 ? "⭐️ Merit Scholarship Tier" : pcmPercentage >= 70 ? "✅ NAT Standard Qualified" : "⚡️ Foundation Focus"}
-                    </span>
+                    <span>4. Academic Eligibility & Assessment Scores</span>
                   </div>
+                  <span className="text-[10px] text-slate-400 font-medium hidden sm:inline">
+                    NAT: Psychometric (50m) + Math (25m) + Aptitude (25m)
+                  </span>
                 </div>
-                <input
-                  type="range"
-                  min="50"
-                  max="100"
-                  value={pcmPercentage}
-                  onChange={(e) => setPcmPercentage(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#3a86ff]"
-                />
-                <div className="flex justify-between text-[11px] text-slate-400 mt-1">
-                  <span>50% (Eligibility Cutoff)</span>
-                  <span>75% (State Avg)</span>
-                  <span>100% (State Topper)</span>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* 4A. 12th PCM Percentage */}
+                  <div className="p-4 rounded-xl bg-[#0b132b]/80 border border-slate-800 space-y-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <label className="text-xs font-bold text-slate-200 block">
+                          4A. 12th PCM Percentage
+                        </label>
+                        <span className="inline-block mt-0.5 text-[10px] font-medium text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60">
+                          Partner University Statutory Eligibility
+                        </span>
+                      </div>
+                      <span className="text-sm font-bold text-white px-2.5 py-0.5 rounded-lg bg-blue-600/30 border border-blue-500/40 shrink-0">
+                        {pcmPercentage}%
+                      </span>
+                    </div>
+
+                    <input
+                      type="range"
+                      min="50"
+                      max="100"
+                      value={pcmPercentage}
+                      onChange={(e) => setPcmPercentage(Number(e.target.value))}
+                      className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#3a86ff]"
+                    />
+
+                    <div className="flex justify-between text-[10px] text-slate-400 pt-0.5">
+                      <span>50% (Min Cutoff)</span>
+                      <span>75% (State Avg)</span>
+                      <span>100% (Topper)</span>
+                    </div>
+                  </div>
+
+                  {/* 4B. NAT Score (Marks out of 100) */}
+                  <div className="p-4 rounded-xl bg-[#0b132b]/80 border border-slate-800 space-y-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <label className="text-xs font-bold text-slate-200 block">
+                          4B. NAT Score (Out of 100)
+                        </label>
+                        <span
+                          className={`inline-block mt-0.5 text-[10px] font-bold px-2 py-0.5 rounded border ${
+                            natScore >= 85
+                              ? "bg-amber-500/15 text-amber-300 border-amber-500/30"
+                              : natScore >= 70
+                              ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
+                              : "bg-blue-500/15 text-blue-300 border-blue-500/30"
+                          }`}
+                        >
+                          {natScore >= 85
+                            ? "⭐ High Merit & Scholarship Qualified"
+                            : natScore >= 70
+                            ? "✅ Direct Admission Qualified"
+                            : "📘 Foundational Track Qualified"}
+                        </span>
+                      </div>
+                      <span className="text-sm font-bold text-[#3a86ff] px-2.5 py-0.5 rounded-lg bg-blue-600/30 border border-blue-500/40 shrink-0">
+                        {natScore}/100
+                      </span>
+                    </div>
+
+                    <input
+                      type="range"
+                      min="50"
+                      max="100"
+                      value={natScore}
+                      onChange={(e) => setNatScore(Number(e.target.value))}
+                      className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#3a86ff]"
+                    />
+
+                    <div className="flex justify-between text-[10px] text-slate-400 pt-0.5">
+                      <span>50 (Pass Cutoff)</span>
+                      <span>75 (Average)</span>
+                      <span>100 (Max Score)</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 

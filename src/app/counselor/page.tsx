@@ -95,7 +95,8 @@ export default function CounselorPortalPage() {
     const script = `Counselor Pre-Call Brief for ${lead.studentName}:
 - Parent Phone: ${lead.parentPhone}
 - Campus: ${lead.campusName}
-- PCM Score: ${lead.pcmPercentage}% | Budget: ${lead.budgetTier}
+- NAT Assessment Score: ${lead.natScore || 78}/100
+- 12th PCM: ${lead.pcmPercentage}% | Budget: ${lead.budgetTier}
 - Preferred Language: ${lead.preferredLanguage}
 - Readiness Score: ${brief?.readinessScore}/100
 - Primary Objection: ${brief?.primaryObjectionToHandle}
@@ -309,7 +310,7 @@ export default function CounselorPortalPage() {
                   <tr>
                     <th className="py-3.5 px-4">Student & Parent</th>
                     <th className="py-3.5 px-4">Target Campus & Fees</th>
-                    <th className="py-3.5 px-4">12th PCM & Budget</th>
+                    <th className="py-3.5 px-4">NAT & PCM Scores</th>
                     <th className="py-3.5 px-4">Language</th>
                     <th className="py-3.5 px-4">Readiness</th>
                     <th className="py-3.5 px-4 text-right">Pre-Call Action</th>
@@ -318,6 +319,7 @@ export default function CounselorPortalPage() {
                 <tbody className="divide-y divide-slate-800/80">
                   {filteredLeads.map((lead) => {
                     const readiness = lead.report?.counselorBrief?.readinessScore || 75;
+                    const natScoreVal = lead.natScore || 78;
                     return (
                       <tr
                         key={lead.id}
@@ -343,12 +345,26 @@ export default function CounselorPortalPage() {
                           </p>
                         </td>
 
-                        {/* PCM & Budget */}
+                        {/* NAT & PCM Scores */}
                         <td className="py-3.5 px-4">
-                          <span className="inline-block px-2 py-0.5 rounded font-bold bg-blue-500/10 text-[#3a86ff] border border-blue-500/20">
-                            {lead.pcmPercentage}% PCM
-                          </span>
-                          <p className="text-slate-400 mt-1 text-[11px]">{lead.budgetTier}</p>
+                          <div className="flex flex-col gap-1 items-start">
+                            <span
+                              className={`inline-flex items-center px-2 py-0.5 rounded font-black text-[11px] border ${
+                                natScoreVal >= 85
+                                  ? "bg-amber-500/15 text-amber-300 border-amber-500/30"
+                                  : natScoreVal >= 70
+                                  ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
+                                  : "bg-blue-500/15 text-blue-300 border-blue-500/30"
+                              }`}
+                            >
+                              NAT: {natScoreVal}/100
+                            </span>
+                            <div className="flex items-center space-x-1.5 text-[11px]">
+                              <span className="font-semibold text-slate-300">{lead.pcmPercentage}% PCM</span>
+                              <span className="text-slate-500">•</span>
+                              <span className="text-slate-400">{lead.budgetTier}</span>
+                            </div>
+                          </div>
                         </td>
 
                         {/* Language */}
@@ -427,26 +443,49 @@ export default function CounselorPortalPage() {
               </div>
 
               {/* Score & Campus Snapshot */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-                  <span className="text-[11px] text-slate-400 font-bold uppercase">Readiness Score</span>
-                  <p className="text-xl font-extrabold text-emerald-400 mt-1">
-                    {selectedLead.report?.counselorBrief?.readinessScore || 78}/100
+                  <span className="text-[10px] text-slate-400 font-bold uppercase">NAT Assessment</span>
+                  <p className="text-xl font-black text-[#3a86ff] mt-1">
+                    {selectedLead.natScore || 78}/100
                   </p>
+                  <span className="text-[10px] text-slate-400 block mt-0.5 font-medium truncate">
+                    {(selectedLead.natScore || 78) >= 85
+                      ? "⭐ High Merit"
+                      : (selectedLead.natScore || 78) >= 70
+                      ? "✅ Direct Qualified"
+                      : "📘 Foundational"}
+                  </span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-                  <span className="text-[11px] text-slate-400 font-bold uppercase">Target Campus</span>
-                  <p className="text-xs font-bold text-white mt-1 truncate">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase">12th PCM Score</span>
+                  <p className="text-xl font-black text-white mt-1">
+                    {selectedLead.pcmPercentage}%
+                  </p>
+                  <span className="text-[10px] text-emerald-400 block mt-0.5 font-medium">
+                    Statutory Eligible
+                  </span>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase">Counselor Readiness</span>
+                  <p className="text-xl font-black text-emerald-400 mt-1">
+                    {selectedLead.report?.counselorBrief?.readinessScore || 78}%
+                  </p>
+                  <span className="text-[10px] text-slate-400 block mt-0.5 truncate">
                     {selectedLead.campusName}
-                  </p>
+                  </span>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 col-span-2 sm:col-span-1">
-                  <span className="text-[11px] text-slate-400 font-bold uppercase">Preferred Language</span>
-                  <p className="text-xs font-bold text-[#3a86ff] mt-1">
+                <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase">Language & Budget</span>
+                  <p className="text-xs font-bold text-amber-300 mt-1.5 truncate">
                     {selectedLead.preferredLanguage}
                   </p>
+                  <span className="text-[10px] text-slate-400 block mt-0.5">
+                    {selectedLead.budgetTier}
+                  </span>
                 </div>
               </div>
 

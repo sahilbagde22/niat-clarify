@@ -34,6 +34,7 @@ export interface LeadRecord {
   campusName: string;
   campusTotalFee: number;
   pcmPercentage: number;
+  natScore?: number;
   budgetTier: string;
   preferredLanguage: string;
   report: ROIReport;
@@ -75,6 +76,7 @@ export async function getLeads(): Promise<LeadRecord[]> {
           campusName: row.campus_name || row.campusName,
           campusTotalFee: row.campus_total_fee || row.campusTotalFee || 0,
           pcmPercentage: row.pcm_percentage || row.pcmPercentage || 0,
+          natScore: row.nat_score || row.natScore || (typeof row.report === "object" ? row.report?.natScore : undefined) || 78,
           budgetTier: row.budget_tier || row.budgetTier || "",
           preferredLanguage: row.preferred_language || row.preferredLanguage || "English",
           report: typeof row.report === "string" ? JSON.parse(row.report) : row.report,
@@ -127,7 +129,7 @@ export async function saveLead(lead: LeadRecord): Promise<void> {
           pcm_percentage: lead.pcmPercentage,
           budget_tier: lead.budgetTier,
           preferred_language: lead.preferredLanguage,
-          report: lead.report,
+          report: { ...lead.report, natScore: lead.natScore },
         }),
       });
       if (res.ok) {
